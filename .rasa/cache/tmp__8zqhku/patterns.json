@@ -1,0 +1,10 @@
+[
+  {
+    "name": "ten_phong",
+    "pattern": "(\\bPhòng\\ Đào\\ tạo\\b|\\bPhòng\\ Công\\ tác\\ Sinh\\ viên\\b|\\bPhòng\\ CTSV\\b|\\bPhòng\\ Kế\\ hoạch\\ \\-\\ Tài\\ vụ\\b|\\bPhòng\\ KH\\-TV\\b|\\bThư\\ viện\\b|\\bPhòng\\ Khảo\\ thí\\ và\\ Đảm\\ bảo\\ chất\\ lượng\\b|\\bPhòng\\ KT\\-ĐBCL\\b|\\bPhòng\\ Quan\\ hệ\\ đối\\ ngoại\\b|\\bTrung\\ tâm\\ Tin\\ học\\b|\\bPhòng\\ Tổ\\ chức\\ –\\ Chính\\ trị\\b|\\bPhòng\\ Quản\\ trị\\ \\-\\ Thiết\\ bị\\b|\\bTrung\\ tâm\\ Ngoại\\ ngữ\\ và\\ Phát\\ triển\\ nguồn\\ nhân\\ lực\\b)"
+  },
+  {
+    "name": "ten_he_thong",
+    "pattern": "(\\bCổng\\ sinh\\ viên\\b|\\bsao\\.agu\\.edu\\.vn\\b|\\bhệ\\ thống\\ Thư\\ viện\\b|\\blib\\.agu\\.edu\\.vn\\b|\\bHệ\\ thống\\ đăng\\ ký\\ học\\ phần\\b|\\bregis\\.agu\\.edu\\.vn\\b|\\bCổng\\ sinh\\ viên\\ AGU\\b|\\bHệ\\ thống\\ đăng\\ ký\\ môn\\ học\\b)"
+  }
+]

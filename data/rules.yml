@@ -1,13 +1,37 @@
 version: "3.1"
-
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Chào hỏi
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: chao_hoi
+  - action: utter_chao_hoi
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Tạm biệt
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: tam_biet
+  - action: utter_tam_biet
+
+- rule: Cảm ơn
+  steps:
+  - intent: cam_on
+  - action: utter_cam_on
+
+- rule: Cung cấp thông tin phòng ban
+  steps:
+  - intent: hoi_thong_tin_phong_ban
+  - action: action_thong_tin_phong_ban
+
+- rule: Cung cấp thủ tục học vụ
+  steps:
+  - intent: hoi_thu_tuc_hocvu
+  - action: action_thu_tuc_hocvu
+
+- rule: Xem thông báo phòng ban
+  steps:
+  - intent: xem_thong_bao_phong
+  - action: action_thong_bao
+
+- rule: Hướng dẫn sử dụng hệ thống
+  steps:
+  - intent: huong_dan_he_thong
+  - action: action_huong_dan_he_thong

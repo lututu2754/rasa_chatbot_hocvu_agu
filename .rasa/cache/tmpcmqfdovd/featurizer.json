@@ -1,0 +1,61 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "back": 0,
+        "cam_xuc_khong_tot": 1,
+        "cam_xuc_tot": 2,
+        "chao_hoi": 3,
+        "dong_y": 4,
+        "hoi_huong_dan_he_thong": 5,
+        "hoi_thong_bao": 6,
+        "hoi_thong_tin_phong_ban": 7,
+        "hoi_thu_tuc_hoc_vu": 8,
+        "nlu_fallback": 9,
+        "out_of_scope": 10,
+        "restart": 11,
+        "session_start": 12,
+        "tam_biet": 13,
+        "tu_choi": 14
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_thong_tin_phong_ban": 13,
+        "action_thu_tuc_hocvu": 14,
+        "action_thong_bao": 15,
+        "action_huong_dan_he_thong": 16,
+        "utter_chao_hoi": 17,
+        "utter_tam_biet": 18
+      },
+      "entities": {
+        "he_thong": 0,
+        "phong_ban": 1,
+        "thong_bao": 2,
+        "thu_tuc": 3
+      },
+      "slots": {
+        "phong_ban_0": 0,
+        "thu_tuc_0": 1,
+        "he_thong_0": 2
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

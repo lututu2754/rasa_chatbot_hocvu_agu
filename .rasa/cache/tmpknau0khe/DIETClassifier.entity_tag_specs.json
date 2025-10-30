@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-he_thong",
+      "2": "I-he_thong",
+      "3": "L-he_thong",
+      "4": "U-he_thong",
+      "5": "B-phong_ban",
+      "6": "I-phong_ban",
+      "7": "L-phong_ban",
+      "8": "U-phong_ban",
+      "9": "B-thu_tuc",
+      "10": "I-thu_tuc",
+      "11": "L-thu_tuc",
+      "12": "U-thu_tuc",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-he_thong": 1,
+      "I-he_thong": 2,
+      "L-he_thong": 3,
+      "U-he_thong": 4,
+      "B-phong_ban": 5,
+      "I-phong_ban": 6,
+      "L-phong_ban": 7,
+      "U-phong_ban": 8,
+      "B-thu_tuc": 9,
+      "I-thu_tuc": 10,
+      "L-thu_tuc": 11,
+      "U-thu_tuc": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

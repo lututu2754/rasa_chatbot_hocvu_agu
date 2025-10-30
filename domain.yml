@@ -1,40 +1,51 @@
 version: "3.1"
 
 intents:
+  - hoi_thong_tin_phong_ban
+  - hoi_thu_tuc_hocvu
+  - xem_thong_bao_phong
+  - huong_dan_he_thong
   - chao_hoi
   - tam_biet
-  - dong_y
-  - tu_choi
-  - cam_xuc_tot
-  - cam_xuc_khong_tot
-  - hoi_bot
+  - cam_on
 
 entities:
-  - phong_ban
-  - thu_tuc
-  - thong_bao
-  - he_thong
+  - ten_phong
+  - ten_thutuc
+  - ten_he_thong
+
+slots:
+  ten_phong:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ten_phong
+
+  ten_thutuc:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ten_thutuc
+
+  ten_he_thong:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ten_he_thong
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_chao_hoi:
+    - text: "Xin chào! Mình là trợ lý học vụ AGU. Bạn cần hỗ trợ về thủ tục hay thông tin phòng ban nào ạ?"
+  utter_tam_biet:
+    - text: "Cảm ơn bạn! Chúc bạn học tốt nhé!"
+  utter_cam_on:
+    - text: "Không có gì ạ. Rất vui được giúp bạn!"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+  - action_thong_tin_phong_ban
+  - action_thu_tuc_hocvu
+  - action_thong_bao
+  - action_huong_dan_he_thong
