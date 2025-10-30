@@ -3,7 +3,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import mysql.connector
 
-# Giữ nguyên cấu hình DB
+# Cấu hình DB
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
@@ -14,19 +14,19 @@ DB_CONFIG = {
 }
 
 
-# --- HÀM HELPER QUAN TRỌNG ---
-# Hàm này sẽ tạo và trả về kết nối + con trỏ MỚI mỗi khi được gọi
+# --- HÀM HELPER QUẢN LÝ KẾT NỐI ---
+# Tạo và trả về kết nối + con trỏ MỚI mỗi khi được gọi
 def get_db_connection():
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
-        cursor = conn.cursor(dictionary=True)  # Dùng dictionary=True rất tốt!
+        cursor = conn.cursor(dictionary=True)  # Dùng dictionary=True là rất tốt!
         return conn, cursor
     except mysql.connector.Error as err:
         print(f"Lỗi kết nối MySQL: {err}")
         return None, None
 
 
-# -------------------------------
+# -----------------------------------
 
 
 class ActionThongTinPhongBan(Action):
@@ -50,12 +50,12 @@ class ActionThongTinPhongBan(Action):
         # Tạo kết nối MỚI cho action này
         conn, cursor = get_db_connection()
 
-        # Luôn kiểm tra kết nối có thành công không
         if not conn or not cursor:
             dispatcher.utter_message(text="Lỗi: Không thể kết nối đến cơ sở dữ liệu.")
             return []
 
         try:
+            # Truy vấn chính xác hơn bằng LIKE
             query = "SELECT * FROM phong_ban WHERE ten_phong LIKE %s"
             cursor.execute(query, (f"%{phong}%",))
             result = cursor.fetchone()
@@ -77,7 +77,7 @@ class ActionThongTinPhongBan(Action):
             dispatcher.utter_message(text="Đã xảy ra lỗi khi truy vấn dữ liệu.")
 
         finally:
-            # --- RẤT QUAN TRỌNG: Đóng kết nối sau khi dùng ---
+            # Đóng kết nối sau khi dùng xong
             if cursor:
                 cursor.close()
             if conn:
@@ -159,14 +159,14 @@ class ActionThongBao(Action):
             return []
 
         try:
-            # Thêm LIMIT 5 để tránh spam người dùng nếu có quá nhiều thông báo
+            # Thêm LIMIT 5 để tránh spam người dùng
             query = """
             SELECT tb.tieu_de, tb.noi_dung, tb.ngay_dang 
             FROM thong_bao tb 
             JOIN phong_ban pb ON tb.phong_id = pb.ma_phong 
             WHERE pb.ten_phong LIKE %s 
             ORDER BY tb.ngay_dang DESC
-            LIMIT 5 
+            LIMIT 5
             """
             cursor.execute(query, (f"%{phong}%",))
             results = cursor.fetchall()

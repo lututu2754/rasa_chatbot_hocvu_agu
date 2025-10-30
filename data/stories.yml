@@ -1,9 +1,20 @@
 version: "3.1"
 
 stories:
-- story: cảm ơn và tạm biệt
+- story: cảm ơn và tạm biệt (luồng nhiều bước)
   steps:
   - intent: cam_on
   - action: utter_cam_on
   - intent: tam_biet
   - action: utter_tam_biet
+
+- story: chào hỏi rồi hỏi thông tin (luồng nhiều bước)
+  steps:
+  - intent: chao_hoi
+  - action: utter_chao_hoi
+  - intent: hoi_thong_tin_phong_ban
+    entities:
+    - ten_phong: "Phòng Đào tạo"
+  - action: action_thong_tin_phong_ban
+  - intent: cam_on
+  - action: utter_cam_on

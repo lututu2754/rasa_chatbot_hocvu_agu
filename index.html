@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phòng Đào tạo - Trường Đại học An Giang</title>
+    <style>
+      /* --- CSS Reset & Global --- */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        gap: 20px;
+      }
+      a {
+        color: #0056b3;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #004a99;
+      }
+
+      /* --- Header --- */
+      header {
+        background-color: #004a99; /* Màu xanh chủ đạo của AGU */
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      header .logo {
+        float: left;
+        height: 60px; /* Thêm logo của bạn vào đây */
+      }
+      header h1 {
+        color: white;
+        margin: 0;
+        font-size: 2em;
+      }
+      header p {
+        margin: 0;
+        font-size: 1.2em;
+      }
+
+      /* --- Navigation Bar --- */
+      nav {
+        background-color: #333;
+        overflow: hidden;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        background-color: #555;
+        text-decoration: none;
+      }
+
+      /* --- Main Content Area (Cột trái) --- */
+      .main-content {
+        flex: 3; /* Chiếm 3/4 không gian */
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .news-item {
+        border-bottom: 1px dashed #ccc;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+      }
+      .news-item h3 {
+        margin-top: 0;
+      }
+      .news-item .date {
+        font-size: 0.9em;
+        color: #777;
+        font-style: italic;
+      }
+      .pagination {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .pagination a {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        margin: 0 3px;
+      }
+      .pagination a.active {
+        background-color: #004a99;
+        color: white;
+        border-color: #004a99;
+      }
+
+      /* --- Sidebar (Cột phải) --- */
+      .sidebar {
+        flex: 1; /* Chiếm 1/4 không gian */
+      }
+      .sidebar-widget {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .sidebar-widget h3 {
+        margin-top: 0;
+        border-bottom: 2px solid #004a99;
+        padding-bottom: 5px;
+      }
+      .sidebar-widget ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .sidebar-widget ul li {
+        margin-bottom: 10px;
+      }
+      .sidebar-widget ul li a::before {
+        content: "» ";
+        color: #004a99;
+      }
+
+      /* --- Footer --- */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>TRƯỜNG ĐẠI HỌC AN GIANG</h1>
+      <p>PHÒNG ĐÀO TẠO</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Thông báo</a></li>
+        <li><a href="#">Quy chế & Biểu mẫu</a></li>
+        <li><a href="#">Chương trình đào tạo</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <main class="main-content">
+        <h2>Thông báo mới nhất</h2>
+
+        <article class="news-item">
+          <h3>Thông báo V/v Đăng ký học phần Học kỳ 1, năm học 2025-2026</h3>
+          <p class="date">Ngày đăng: 28/10/2025</p>
+          <p>
+            Phòng Đào tạo thông báo kế hoạch đăng ký học phần trực tuyến cho
+            sinh viên các khóa. Sinh viên vui lòng xem chi tiết lịch đăng ký,
+            các môn học mở...
+          </p>
+          <a href="#">Xem chi tiết »</a>
+        </article>
+
+        <article class="news-item">
+          <h3>
+            Kế hoạch tổ chức thi kết thúc học phần Học kỳ 3 (Hè), năm học
+            2024-2025
+          </h3>
+          <p class="date">Ngày đăng: 25/10/2025</p>
+          <p>
+            Lịch thi dự kiến cho các lớp học phần tổ chức trong học kỳ hè. Sinh
+            viên theo dõi lịch thi chi tiết trên Cổng thông tin sinh viên...
+          </p>
+          <a href="#">Xem chi tiết »</a>
+        </article>
+
+        <article class="news-item">
+          <h3>Thông báo V/v nộp hồ sơ xét tốt nghiệp đợt 2, năm 2025</h3>
+          <p class="date">Ngày đăng: 22/10/2025</p>
+          <p>
+            Các sinh viên đủ điều kiện tốt nghiệp vui lòng hoàn tất hồ sơ (bao
+            gồm đơn, chứng chỉ ngoại ngữ, chứng chỉ GDQP-AN) và nộp về...
+          </p>
+          <a href="#">Xem chi tiết »</a>
+        </article>
+
+        <div class="pagination">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">Trang cuối »</a>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h3>Liên kết nhanh</h3>
+          <ul>
+            <li>
+              <a href="https://sao.agu.edu.vn/">Cổng thông tin sinh viên</a>
+            </li>
+            <li>
+              <a href="https://regis.agu.edu.vn/">Hệ thống Đăng ký học phần</a>
+            </li>
+            <li><a href="https://lib.agu.edu.vn/">Thư viện</a></li>
+            <li><a href="#">Hệ thống E-learning</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Quy chế & Biểu mẫu</h3>
+          <ul>
+            <li><a href="#">Quy chế học vụ</a></li>
+            <li><a href="#">Quy định về xét tốt nghiệp</a></li>
+            <li><a href="#">Đơn xin bảo lưu kết quả</a></li>
+            <li><a href="#">Đơn xin xác nhận sinh viên</a></li>
+            <li><a href="#">Mẫu đơn phúc khảo điểm</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Bản quyền thuộc về Trường Đại học An Giang</p>
+      <p>
+        Địa chỉ: Số 18, đường Ung Văn Khiêm, phường Đông Xuyên, TP. Long Xuyên,
+        An Giang
+      </p>
+    </footer>
+
+    <script>
+      !(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+
+        /* ĐÂY LÀ DÒNG ĐÃ THAY ĐỔI: Dùng unpkg.com và version 1.5.0 */
+        (e.src = "https://unpkg.com/rasa-webchat@1.5.0/lib/index.min.js"),
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                initPayload: "/chao_hoi",
+                customData: { language: "vi" },
+                socketUrl: "http://localhost:5005",
+                title: "Trợ lý Học vụ AGU",
+                subtitle: "Luôn sẵn sàng hỗ trợ bạn",
+                inputTextFieldHint: "Nhập câu hỏi của bạn...",
+                connectingText: "Đang kết nối...",
+                openLauncherImage:
+                  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOC4zMzM0IDEwQzE4LjMzMzQgMTQuNjAyNCAxNC4xMDI0IDE4LjMzMzQgMTAgMTguMzMzNEM1LjM5NzY1IDE4LjMzMzQgMS42NjY2OSAxNC42MDI0IDEuNjY2NjkgMTBDMS42NjY2OSA1LjM5NzY1IDUuM5c3NjUgMS42NjY2OSAxMCAxLjY2NjY5QzE0LjgwMjQgMS42NjY2OSAxOC4zMzM0IDUuM5c3NjUgMTguMzMzNCAxMFpNNy41MDAwMiAxMi40OTk4QzcuOTc3MTkgMTIuNDk5OCA4LjMzMzM1IDEyLjAyMjYgOC4zMzMzNSA4LjMzMzEyQzguMzMzMzUgNy45NzcxOSA3Ljk3NzE5IDcuNDk5OTggNy41MDAwMiA3LjQ5OTk4QzcuMDIyODQgNy40OTk5OCA2LjY2NjY5IDcuOTc3MTkgNi42NjY2OSA4LjMzMzEyQzYuNjY2NjkgMTIuMDIyNiA3LjAyMjg0IDEyLjQ5OTggNy41MDAwMiAxMi40OTk4Wk0xMi41MDAwIDcuNDk5OThDMTIuOTc3MiA3LjQ5OTk4IDEzLjMzMzQgNy45NzcxOSAxMy4zMzM0IDguMzMzMTJDMTMuMzMzNCAxMi4wMjI2IDEyLjk3NzIgMTIuNDk5OCAxMi41MDAwIDEyLjQ5OThDMTIuMDIyOCAxMi40OTk4IDExLjY2NjcgMTIuMDIyNiAxMS42NjY3IDguMzMzMTJDMS42NjY3IDcuOTc3MTkgMTIuMDIyOCA3LjQ5OTk4IDEyLjUwMDAgNy40OTk5OFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+                closeLauncherImage:
+                  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzIDEuNzk4MDhMLTEgMUw2LjIxMTkzIDdMMCAxMi4yMDE5TDEuNzk4MDggMTNMNyA3Ljc4ODA3TDEyLjIwMTkgMTNMMTMgMTEuMjAxOUw3Ljc4ODA3IDdMMTMgMS43OTgwOFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+                params: { storage: "session" },
+              },
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+      })();
+    </script>
+  </body>
+</html>

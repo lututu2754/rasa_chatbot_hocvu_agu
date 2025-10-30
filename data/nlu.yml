@@ -44,6 +44,8 @@ nlu:
     - [Phòng Tổ chức – Chính trị](ten_phong) làm việc buổi nào?
     - Tôi muốn biết địa chỉ [Phòng Quản trị - Thiết bị](ten_phong)
     - Cho tôi liên hệ [Trung tâm Ngoại ngữ và Phát triển nguồn nhân lực](ten_phong)
+    - [Phòng CTSV](ten_phong) ở đâu? # Thêm ví dụ viết tắt
+    - [PĐT](ten_phong) làm việc giờ nào? # Thêm ví dụ viết tắt
 
 # -------------------------------
 # 2️⃣ Hỏi thủ tục học vụ
@@ -68,13 +70,13 @@ nlu:
 - intent: xem_thong_bao_phong
   examples: |
     - Cho tôi xem thông báo mới của [Phòng Công tác Sinh viên](ten_phong)
-    - [Phòng CTSV](ten_phong) có thông báo gì mới không?
+    - [Phòng CTSV](ten_phong) có thông báo gì mới không? # Thêm ví dụ viết tắt
     - Thông báo của [Phòng Đào tạo](ten_phong) hôm nay là gì?
     - Có tin gì mới từ [Phòng Khảo thí và Đảm bảo chất lượng](ten_phong) không?
     - [Phòng Quan hệ đối ngoại](ten_phong) có thông báo nào không?
     - Danh sách thông báo của [Phòng Kế hoạch - Tài vụ](ten_phong)
     - Cập nhật thông báo của [Thư viện](ten_phong) giúp tôi
-    - Có thông báo mới nào từ [Phòng Đào tạo](ten_phong) không?
+    - Có thông báo mới nào từ [PĐT](ten_phong) không? # Thêm ví dụ viết tắt
 
 # -------------------------------
 # 4️⃣ Hướng dẫn hệ thống
@@ -90,23 +92,23 @@ nlu:
     - Tôi cần hướng dẫn sử dụng [Cổng sinh viên AGU](ten_he_thong)
     - Hướng dẫn truy cập [Hệ thống đăng ký môn học](ten_he_thong)
 
-- lookup: ten_phong # Giúp bot nhận diện các tên phòng và từ viết tắt
+# -------------------------------
+# 5️⃣ Bổ sung: Lookup Tables (Giúp nhận diện tốt hơn)
+# -------------------------------
+- lookup: ten_phong
   examples: |
     - Phòng Đào tạo
     - Phòng Công tác Sinh viên
-    - Phòng CTSV
     - Phòng Kế hoạch - Tài vụ
-    - Phòng KH-TV
     - Thư viện
     - Phòng Khảo thí và Đảm bảo chất lượng
-    - Phòng KT-ĐBCL
     - Phòng Quan hệ đối ngoại
     - Trung tâm Tin học
     - Phòng Tổ chức – Chính trị
     - Phòng Quản trị - Thiết bị
     - Trung tâm Ngoại ngữ và Phát triển nguồn nhân lực
 
-- lookup: ten_he_thong # Giúp bot nhận diện các tên hệ thống và link
+- lookup: ten_he_thong
   examples: |
     - Cổng sinh viên
     - sao.agu.edu.vn
@@ -116,3 +118,28 @@ nlu:
     - regis.agu.edu.vn
     - Cổng sinh viên AGU
     - Hệ thống đăng ký môn học
+
+# -------------------------------
+# 6️⃣ Bổ sung: Synonyms (Ánh xạ từ viết tắt -> tên đầy đủ trong CSDL)
+# -------------------------------
+- synonym: "Phòng Công tác Sinh viên" # Tên đầy đủ trong CSDL
+  examples: |
+    - Phòng CTSV
+    - phòng ctsv
+    - CTSV
+
+- synonym: "Phòng Đào tạo"
+  examples: |
+    - PĐT
+    - phòng đào tạo
+
+- synonym: "Phòng Kế hoạch - Tài vụ"
+  examples: |
+    - Phòng KHTC
+    - phòng tài vụ
+    - phòng kế hoạch tài vụ
+
+- synonym: "Phòng Khảo thí và Đảm bảo chất lượng"
+  examples: |
+    - Phòng KT-ĐBCL
+    - phòng khảo thí

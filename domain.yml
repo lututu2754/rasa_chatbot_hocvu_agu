@@ -17,21 +17,21 @@ entities:
 slots:
   ten_phong:
     type: text
-    influence_conversation: true
+    influence_conversation: true # Đổi thành true để bot nhớ phòng ban
     mappings:
       - type: from_entity
         entity: ten_phong
 
   ten_thutuc:
     type: text
-    influence_conversation: true
+    influence_conversation: true # Đổi thành true để bot nhớ thủ tục
     mappings:
       - type: from_entity
         entity: ten_thutuc
 
   ten_he_thong:
     type: text
-    influence_conversation: true
+    influence_conversation: true # Đổi thành true
     mappings:
       - type: from_entity
         entity: ten_he_thong
@@ -49,3 +49,7 @@ actions:
   - action_thu_tuc_hocvu
   - action_thong_bao
   - action_huong_dan_he_thong
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
